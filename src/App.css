@@ -1,0 +1,156 @@
+/* General styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Ensure box-sizing is set globally */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #121212; /* Dark background */
+  color: #ffffff; /* White text */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Spaces content between top and bottom */
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  height: 100%;
+  position: relative;
+}
+
+/* Button container at the top */
+.button-container {
+  display: flex;
+  justify-content: space-between; /* Distribute buttons evenly */
+  gap: 20px;
+  width: 80%;
+  position: absolute;
+  top: 20px;
+}
+
+.login-button {
+  background-color: #1f1f1f;
+  color: #ffffff;
+  padding: 20px 30px; /* Increase padding for better spacing */
+  font-size: 20px;
+  border: 1px solid #333;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  flex: 1;
+}
+
+.login-button:hover {
+  background-color: #333;
+}
+
+/* Login Form Styling */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px; /* Add space between inputs */
+  background-color: #1e1e1e;
+  padding: 40px; /* Increase padding for better spacing */
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+  width: 100%;
+  max-width: 400px; /* Ensure the form isn't too wide */
+  margin-top: 100px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+input {
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #444;
+  border-radius: 8px;
+  padding: 12px;
+  margin-top: 8px;
+  width: 100%;
+  box-sizing: border-box; /* Prevents input from growing */
+}
+
+button {
+  background-color: #5a5a5a;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #777;
+}
+
+/* debug label Styling */
+.debug {
+  font-size: 14px;
+  color: #aaa;
+  position: absolute;
+  bottom: 20px; 
+  width: 100%;
+  text-align: center;
+}
+
+/* dashboards */
+.dashboard-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* teacher dashboard styling */
+.events-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.event-card {
+  background-color: #2a2a2a;
+  color: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  width: 200px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.event-card:hover {
+  transform: translateY(-10px);
+}
+
+.event-card h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.event-card p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.event-card strong {
+  color: #ffcc00; /* highlight the labels */
+}
+
