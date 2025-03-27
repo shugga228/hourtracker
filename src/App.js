@@ -7,11 +7,12 @@
 - make some map or diagram of wtv tf i was cooking
 - ****learn react****
 - NEED TO RENAME pullEvents.js LOOK AT ERROR MESSAGE
+- check lines 22, 55, 90-97
 */
 import React, { useState } from 'react';
 import './App.css';
 import { createClient } from "@supabase/supabase-js";
-import pullEvents from "./pullEvents";
+import useEvents from "./useEvents";
 
 // app component
 const App = () => {
@@ -19,7 +20,7 @@ const App = () => {
   const [userType, setUserType] = useState('');
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const [events] = pullEvents(); // sets events list = data pulled from db through pullevents
+  const [events] = useEvents(); // sets events list = data pulled from db through pullevents -> need to figure out what setEvents does
   /*
   const [events, setEvents] = useState([
     { name: "Math Competition", date: "2025-02-05", time: "10:00 AM", location: "Room 101" },
@@ -50,11 +51,11 @@ const App = () => {
     setUserType('');
   };
 
-  /*
+
   const handleAddEvent = (newEvent) => {
-    setEvents((prevEvents) => [...prevEvents, newEvent]);
+    setEvents((prevEvents) => [...prevEvents, newEvent]); // seems to update events list w/ const newevents -> assembled on add event button press, dont need to change this, need to change lines 90-97
   };
-  */
+
 
   return (
     <div>
